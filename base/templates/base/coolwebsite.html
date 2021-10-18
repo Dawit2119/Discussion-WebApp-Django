@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cool-website</title>
+</head>
+<body>
+    <h1>All Rooms</h1>
+    <div id="rooms-container">
+
+    </div>
+</body>
+<script>
+    let rooms = async()=>{
+        let response = await fetch('http://127.0.0.1:8000/api/rooms')
+        response = await response.json()
+        console.log(response)
+        for (let i = 0;i < response.length;i++){
+            document.getElementById('rooms-container').innerHTML += 
+            `<p>${response[i].name}</p>`
+        }
+    }
+    rooms()
+</script>
+</html>
