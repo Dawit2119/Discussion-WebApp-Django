@@ -1,2 +1,3 @@
 # Discussion-WebApp-Django
-# to run the app use pip install -r req.txt
+# to install packages pip install -r req.txt
+# to run the app change directory to root folder and type python manage.py runserver
